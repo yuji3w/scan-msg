@@ -1,5 +1,10 @@
 import os
 import pprint
+import argparse
+
+parser = argparse.ArgumentParser()
+parser.add_argument("-i", "--input", required=True, help="file input location")
+args = vars(parser.parse_args())
 
 def parseText(inputText):
 	inputDir = inputText
@@ -18,7 +23,7 @@ def parseText(inputText):
 			msg += line
 	return msgs
 
-msgs = parseText(r"C:\Users\Yujie Wang\Desktop\ml.txt")
+msgs = parseText(args["input"])
 
 #You might hate me but argparser takes 2 mins.
 
