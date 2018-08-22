@@ -35,7 +35,8 @@ for msg in msgs:
 
 print("\n\n\n\n")
 pprint.pprint(mlmsgs)
-print(str(len(mlmsgs)) + "/" + str(len(msgs)))
+print("\n\n\n\n")
+print(str(len(mlmsgs)) + " messages / " + str(len(msgs)) + " messages are about machine learning")
 print("\n\n\n\n")
 notml = list(set(msgs) - set(mlmsgs))
 pprint.pprint(notml)
